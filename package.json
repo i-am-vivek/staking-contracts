@@ -1,0 +1,21 @@
+{
+  "name": "staking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test",
+    "start": "truffle migrate && truffle test",
+    "test_on_matic": "truffle migrate --network matic && truffle test --network matic"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.1.15",
+    "chai": "^4.3.10",
+    "ethers": "^6.9.0"
+  }
+}
