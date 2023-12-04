@@ -23,6 +23,7 @@
 // const infuraProjectId = process.env["INFURA_PROJECT_ID"];
  
 const HDWalletProvider = require('@truffle/hdwallet-provider');
+const PrivateKeyProvider = require('web3-privatekey-provider');
 
 module.exports = {
   /**
@@ -56,6 +57,11 @@ module.exports = {
       network_id: 80001,       // Any network (default: none)
       provider: () => new HDWalletProvider(process.env.MNEMONIC, `https://rpc-mumbai.polygon.technology`),
       // network_id: 4,
+      gas: 5500000, // Gas limit used for deploys
+    },
+    bnb: {
+      network_id: 56, // Any network (default: none)
+      provider: () => new HDWalletProvider(process.env.PRIVATE_KEY, `https://bsc-dataseed.binance.org/`),
       gas: 5500000, // Gas limit used for deploys
     },
 
